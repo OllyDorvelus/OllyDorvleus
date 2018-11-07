@@ -1,0 +1,120 @@
+$webpage-bg-color: #f2f2f2;
+$primary-font: 'Spectral';
+html {
+ overflow-x: hidden;
+ font-size: 100%;
+}
+
+body {
+  font-family: $primary-font;
+  background-color: $webpage-bg-color;
+}
+
+.land-img {
+  height: 7.813rem;
+  width: 9.375rem;
+}
+
+#olly-section {
+  padding-top:1.75rem;
+}
+
+nav {
+  padding-top:0.5rem;
+  div {
+    font-size: 1.5rem;
+    display: inline;
+    padding-right: 0.75rem;
+    a {
+      color: inherit;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: inherit;
+      background-color: gray;
+      opacity: 0.7;
+    }
+  }
+}
+
+#resume {
+  padding-top: 2.5rem;
+}
+
+.c-side {
+  padding-bottom:2rem;
+}
+
+#experience {
+  .resume-section-title {
+    font-weight:600;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+  }
+}
+
+#side-section {
+  #education {
+
+  }
+
+  .resume-section-title {
+    font-weight:600;
+    font-size: 1.5rem;
+  }
+
+  #technical {
+    .sub-section {
+      padding-bottom:2rem;
+    }
+    .sub-title {
+      font-size:1.1rem;
+      border-bottom: 2px solid #f2f2f2;
+      padding-top:1rem;
+      padding-bottom:1rem;
+    }
+
+    h6 {
+      display:inline;
+      padding-right:.75rem;
+    }
+    img {
+        height: 3.125rem;
+        width: 4.688rem;
+    }
+  }
+}
+
+
+.experience-sub {
+  padding-left: 3rem;
+
+
+  .loc-date {
+    p {
+
+    }
+  }
+
+  .job-title {
+    font-weight:600;
+    letter-spacing: .20rem;
+    text-transform: uppercase;
+  }
+
+  h6 {
+    font-weight:600;
+    font-size:1.125rem;
+  }
+
+  .did-item {
+    padding-top:.01rem;
+    font-size: 1.125rem;
+    letter-spacing: .0125rem;
+    //border-bottom: .001rem solid #dbd2d2;
+  }
+}
+
+
+
