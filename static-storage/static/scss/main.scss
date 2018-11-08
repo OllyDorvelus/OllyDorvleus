@@ -156,7 +156,7 @@ subnav {
 
 #portfolio {
   #visumic {
-    background-color: #fff;
+  //  background-color: #fff;
     box-shadow: 0 0 10px black;
   }
   #ulance {
@@ -175,6 +175,17 @@ subnav {
     padding-top:2rem;
     padding-bottom:2rem;
     margin-bottom: .5rem;
+
+    img {
+      padding: 2rem;
+    }
+  }
+
+  h4 {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    font-weight: bold;
+    color: $primary-cl
   }
 
   .logo-img {
