@@ -1,0 +1,68 @@
+{% load static %}
+{% include 'index.html' %}
+
+<div>
+    <div class="" style="padding-top:1.1rem">
+        <subnav>
+            <div><a href="#ulance">Ulance</a></div>
+            <div><a href="#visumic">Visumic</a></div>
+            <div><a href="#akiascallum">Blog</a></div>
+            <div><a href="#vitality">Vitality</a></div>
+        </subnav>
+
+    </div>
+
+    <div id="portfolio">
+
+        <div id="ulance" class="port-section">
+            <div class="text-center">
+                <img  src="{% static 'static/img/Ulance.png' %}" class="img-fluid logo-img">
+                <p>A sleeping cough blankets a disclaimer. A turnround recovers from her player. How does a conduct fear the dust? Should the inaccurate communist fork the garbage?</p>
+            </div>
+            <div class="row">
+                <div data-aos="fade-right" class="col-md-4 col-lg-4 col-sm-12"><img src="{% static 'static/img/uprof.png' %}" class="img-fluid"></div>
+                <div class="col-md-4 col-lg-4 col-sm-12 text-center"><h5>Some text here</h5></div>
+                <div data-aos="fade-left" class="col-md-4 col-lg-4 col-sm-12"><img src="{% static 'static/img/uprof2.png' %}" class="img-fluid"></div>
+            </div>
+        </div>
+
+        <div  id="visumic" class="port-section">
+            <div class="text-center">
+                <img data-aos="zoom-in-up" src="{% static 'static/img/visu.png' %}" class="img-fluid logo-img">
+                <p>A sleeping cough blankets a disclaimer. A turnround recovers from her player. How does a conduct fear the dust? Should the inaccurate communist fork the garbage?</p>
+            </div>
+            <div class="row">
+                <div data-aos="fade-right" class="col-md-4 col-lg-4 col-sm-12"><img src="{% static 'static/img/visu1.png' %}" class="img-fluid"></div>
+                <div class="col-md-4 col-lg-4 col-sm-12 text-center"><h5>Some text here</h5></div>
+                <div data-aos="fade-left"  class="col-md-4 col-lg-4 col-sm-12"><img src="{% static 'static/img/visu2.png' %}" class="img-fluid"></div>
+            </div>
+        </div>
+
+        <div id="akiascallum" class="port-section">
+            <div class="text-center">
+                <img data-aos="zoom-in-up" src="{% static 'static/img/kia.png' %}" class="img-fluid logo-img">
+                <p>A sleeping cough blankets a disclaimer. A turnround recovers from her player. How does a conduct fear the dust? Should the inaccurate communist fork the garbage?</p>
+            </div>
+        </div>
+
+        <div id="vitality" class="port-section">
+            <div class="text-center">
+                <img data-aos="zoom-in-up" src="{% static 'static/img/vit1.png' %}" class="img-fluid logo-img">
+                <p>A sleeping cough blankets a disclaimer. A turnround recovers from her player. How does a conduct fear the dust? Should the inaccurate communist fork the garbage?</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    AOS.init();
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>

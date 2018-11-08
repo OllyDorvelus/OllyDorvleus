@@ -1,5 +1,8 @@
 $webpage-bg-color: #f2f2f2;
 $primary-font: 'Spectral';
+$hover-cl: gray;
+$primary-cl: #000080;
+$akias-cl: darken(#E6CE1D, 10%);
 html {
  overflow-x: hidden;
  font-size: 100%;
@@ -32,7 +35,7 @@ nav {
     a:hover {
       text-decoration: none;
       color: inherit;
-      background-color: gray;
+      background-color: $hover-cl;
       opacity: 0.7;
     }
   }
@@ -62,6 +65,7 @@ nav {
   .resume-section-title {
     font-weight:600;
     font-size: 1.5rem;
+    color: $primary-cl;
   }
 
   #technical {
@@ -70,9 +74,10 @@ nav {
     }
     .sub-title {
       font-size:1.1rem;
-      border-bottom: 2px solid #f2f2f2;
+      border-bottom: 2px solid $webpage-bg-color;
       padding-top:1rem;
       padding-bottom:1rem;
+      font-weight: 600;
     }
 
     h6 {
@@ -101,6 +106,7 @@ nav {
     font-weight:600;
     letter-spacing: .20rem;
     text-transform: uppercase;
+    color: $primary-cl;
   }
 
   h6 {
@@ -113,6 +119,67 @@ nav {
     font-size: 1.125rem;
     letter-spacing: .0125rem;
     //border-bottom: .001rem solid #dbd2d2;
+  }
+}
+
+// PORTFOLIO SECTION
+
+subnav {
+  overflow: hidden;
+  background-color: $primary-cl;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top:4rem;
+  z-index:999;
+
+  div {
+    display:inline;
+    font-size:1.25rem;
+    padding-right:1.1rem;
+    padding-left: 1.1rem;
+    float:left;
+    margin-left:2rem;
+
+    a {
+      color:inherit;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color:inherit;
+      background-color: $hover-cl;
+      opacity: 0.7;
+    }
+  }
+}
+
+#portfolio {
+  #visumic {
+    background-color: #fff;
+    box-shadow: 0 0 10px black;
+  }
+  #ulance {
+    box-shadow: 0 0 10px #c9b241;
+  }
+
+  #akiascallum {
+    box-shadow: 0 0 10px $akias-cl;
+  }
+
+  #vitality {
+    box-shadow: 0 0 10px $primary-cl;
+  }
+
+  .port-section {
+    padding-top:2rem;
+    padding-bottom:2rem;
+    margin-bottom: .5rem;
+  }
+
+  .logo-img {
+    height:20rem;
+    width:55%;
   }
 }
 

@@ -4,4 +4,10 @@ from django.http import JsonResponse
 
 
 def index(request):
-    return render(request, "index.html", {})
+    return render(request, "resume.html", {})
+
+def portfolio(request):
+    return render(request, "portfolio.html", {})
+
+def about(request):
+    return render(request, 'about.html', {})

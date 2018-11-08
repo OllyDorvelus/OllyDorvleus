@@ -1,0 +1,111 @@
+{% load static %}
+{% include "index.html" %}
+<div id="resume" class="row">
+            <div id="experience" class="col-xs-12 col-md-6 offset-md-1 col-lg-6 offset-lg-1 ">
+                <div class="resume-section-title">Professional Experience</div>
+                <hr>
+                <div v-for="job in jobs" style="padding-top:1.5rem">
+                    <div class="experience-sub">
+                        <div>
+                            <div class="loc-date" style="float:right"><em><p>${job.location}</p><p>${job.date}</p></em></div>
+                            <h5 style="" class="job-title">${job.employer}</h5>
+                            <em><h6 style="">${job.title}</h6></em>
+                            <div class="did-section" v-for="role in job.roles">
+                                <div>
+                                    <p class="did-item">- ${role}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <hr>
+             </div>
+            </div>
+
+            <div id="side-section" class="col-xs-12 col-md-4 offset-md-1 col-lg-4 offset-lg-1 mx-auto text-center">
+                <div id="education" class="c-side">
+                    <div class="card" style="width:70%;margin-left:3rem">
+                      <div class="card-body">
+                        <div class="card-title resume-section-title">Education</div>
+                        <h6 class="card-subtitle mb-2 school-title">Indiana Institute of Technology</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Bachelor of Science in Software Engineering, December 2018</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">3.8 GPA</h6>
+                        <br>
+                        <h5 class="card-subtitle mb-2">Extracurricular</h5>
+                        <div v-for="extra in extras">
+                            <h6 class="card-subtitle mb-2 text-muted">${extra}</h6>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div id="technical" class="c-side">
+                    <div class="card" style="width:70%;margin-left:3rem">
+                      <div class="card-body">
+                        <div class="card-title resume-section-title">Technical Experience</div>
+
+                          <div class="sub-section" style="background-color:#f2f2f2">
+                          <h5 class="sub-title">Programming/Web Languages</h5>
+                              <div v-for="language in languages">
+                                <div><h6>${language.name}</h6><img class="technical-img img-fluid rounded-circle" :src="language.image"></div>
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-striped" :class="language.bgColor" role="progressbar" :style="{width: language.progress + '%'}" :aria-valuenow="language.progress" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                        </div>
+
+                          <div class="sub-section">
+                          <h5 class="sub-title">Frameworks & Libraries</h5>
+                              <div v-for="language in languages">
+                                <div><h6>${language.name}</h6><img class="technical-img img-fluid rounded-circle" :src="language.image"></div>
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-striped" :class="language.bgColor" role="progressbar" :style="{width: language.progress + '%'}" :aria-valuenow="language.progress" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                        </div>
+
+                          <div class="sub-section" style="background-color:#f2f2f2">
+                          <h5 class="sub-title">IDES</h5>
+                              <div v-for="language in languages">
+                                <div><h6>${language.name}</h6><img class="technical-img img-fluid rounded-circle" :src="language.image"></div>
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-striped" :class="language.bgColor" role="progressbar" :style="{width: language.progress + '%'}" :aria-valuenow="language.progress" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                        </div>
+
+                          <div class="sub-section">
+                          <h5 class="sub-title">Operating System</h5>
+                              <div v-for="language in languages">
+                                <div><h6>${language.name}</h6><img class="technical-img img-fluid rounded-circle" :src="language.image"></div>
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-striped" :class="language.bgColor" role="progressbar" :style="{width: language.progress + '%'}" :aria-valuenow="language.progress" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<script>
+var demo = new Vue({
+      el: '#resume',
+      delimiters: ['${','}'],
+      data: {
+      extras: ["National Society of Black Engineers", "Association for Computing Machinery", "Black Excellence Association", "Entrepreneur Club"],
+      languages: [{name:"Python", progress:40, bgColor:'bg-success', image:"{% static 'static/img/python.png' %}"},
+                  {name:"Java", progress:40, bgColor:'bg-success', image:"{% static 'static/img/java.png' %}"},
+                  {name:"Java", progress:40, bgColor:'bg-danger', image:"{% static 'static/img/java.png' %}"},
+                  {name:"Java", progress:40, bgColor:'bg-success', image:"{% static 'static/img/java.png' %}"}],
+
+      frameworks: [],
+      operating_systems: [],
+      IDES: [],
+      jobs: [{employer: "INDIANA TECH IT DEPARTMENT", title: "Student Developer", location: "Fort Wayne, IN", date:"September 2017 – August 2017", roles:["Perform SQL queries to pull data from the entire Indiana Tech’s database to integrate with blackboard and starfish",
+      "Work on files such as student course records, attendance, admissions data and create SIS data packages to be used by different Indiana Tech staff members.", "Discuss how we should handle data such as data access and data display across school platforms"]},{employer: "INDIANA TECH IT DEPARTMENT", title: "Student Developer", location: "Fort Wayne, IN", date:"September 2017 – August 2017", roles:["Perform SQL queries to pull data from the entire Indiana Tech’s database to integrate with blackboard and starfish",
+      "Work on files such as student course records, attendance, admissions data and create SIS data packages to be used by different Indiana Tech staff members.", "Discuss how we should handle data such as data access and data display across school platforms"]}
+
+      ]
+      }
+    })
+</script>
