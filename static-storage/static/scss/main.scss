@@ -131,6 +131,8 @@ subnav {
   position: fixed;
   width: 100%;
   top:4rem;
+  height:2rem;
+  border-radius: .5rem;
   z-index:999;
 
   div {
@@ -191,6 +193,25 @@ subnav {
   .logo-img {
     height:20rem;
     width:55%;
+  }
+
+  h2 {
+      padding-top: .4rem;
+      padding-bottom: .4rem;
+      font-weight: bold;
+  }
+
+  h5 {
+    line-height:1.75rem;
+  }
+
+  ul {
+    li {
+      font-size:1.15rem;
+      list-style-type: circle;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+    }
   }
 }
 
