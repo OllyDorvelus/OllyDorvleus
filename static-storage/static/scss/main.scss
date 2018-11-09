@@ -84,10 +84,24 @@ nav {
       display:inline;
       padding-right:.75rem;
     }
+
+  }
+
+  .progress-div {
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+
+    h6 {
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
     img {
         height: 3.125rem;
         width: 4.688rem;
+        padding-left: .5rem;
     }
+
   }
 }
 
