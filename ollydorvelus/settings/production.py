@@ -22,6 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = '^4_c4m%9^9w^&#_)l-e7p)dm_tjg06exo0&-k*34_tnk3!$4()'
 SECRET_KEY = os.environ.get('SECRET_KEY', '^4_c4m%9^9w^&#_)l-e7p)dm_tjg06exo0&-k*34_tnk3!$4()')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

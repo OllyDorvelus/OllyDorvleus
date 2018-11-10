@@ -1,1 +1,1 @@
-web: gunicorn ollydorvelus.wsgi --log-file
+web: gunicorn ollydorvelus.wsgi --log-file -
