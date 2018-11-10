@@ -1,4 +1,2 @@
 # GET RID OF SETTINGS COMMENT when pushing to production
 ollydorvelus/settings/
-ollydorvelus/settings/local.py
-ollydrvelus/settings/base.py

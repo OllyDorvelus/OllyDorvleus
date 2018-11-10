@@ -140,10 +140,10 @@
         <option value="$PROJECT_DIR$/static-storage/static/scss/main.scss" />
         <option value="$PROJECT_DIR$/ollydorvelus/settings/local.py" />
         <option value="$PROJECT_DIR$/runtime.txt" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/ollydorvelus/settings/production.py" />
         <option value="$PROJECT_DIR$/ollydorvelus/settings/__init__.py" />
         <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
