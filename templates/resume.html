@@ -1,5 +1,6 @@
 {% load static %}
 {% include "index.html" %}
+<title>Olivier Dorvelus | Resume</title>
 <div id="resume" class="row">
             <div id="experience" class="col-xs-12 col-md-6 offset-md-1 col-lg-6 offset-lg-1 ">
                 <div class="resume-section-title">Professional Experience</div>
@@ -9,7 +10,7 @@
                         <div>
                             <div class="loc-date" style="float:right"><em><p>${job.location}</p><p>${job.date}</p></em></div>
                             <h5 style="" class="job-title">${job.employer}</h5>
-                            <em><h6 style="">${job.title}</h6></em>
+                            <em><h6 style="margin-left:0.8rem">${job.title}</h6></em>
                             <div class="did-section" v-for="role in job.roles">
                                 <div>
                                     <p class="did-item">- ${role}</p>
@@ -19,6 +20,25 @@
                     </div>
                 <hr>
              </div>
+        <div id="recommendations">
+            <h6 class="resume-section-title">Recommendations</h6><hr>
+            <blockquote>
+                <span style="padding-left:2rem">"It</span> was a pleasure to have Olivier Dorvelus work with us as an intern this summer.  Olivier is a bright student, and brought a wealth of skills with him to this position.
+                I am confident he will do well in his career.
+
+                Olivier accomplished more than we were expecting!  I’ve attached a report of some of the projects he completed this summer, along with a report of his hours worked..
+                There were additional task that he worked on as well.  This included preparing a presentation for our Software Development team on his experiences and recommended tools for developing mobile applications
+                and modern web sites.
+
+                While here, he gained significant experience in working with SQL, as well as JavaScript, HTML, and VB Script in a web application environment.
+                Additionally, he worked on projects for capturing and parsing data from incoming emails, and saving that information into our database.
+                We kept him busy with a variety of experiences, and he was involved in project planning, design, development, testing, implementation, and documentation.
+
+                This was a great experience for all, and I would be amenable to repeating this with another student as bright as Olivier in the future."
+
+                <p>~ Jim Skimos (Petroleum Traders Corporation)</p>
+            </blockquote>
+        </div>
             </div>
 
             <div id="side-section" class="col-xs-12 col-md-4 offset-md-1 col-lg-4 offset-lg-1 mx-auto text-center">
@@ -115,7 +135,7 @@ var demo = new Vue({
 
       ],
 
-      IDES: [{name:"Atom", progress:100, bgColor:'bg-secondary', image:"{% static 'static/img/resume/python.png' %}"},
+      IDES: [{name:"Atom", progress:100, bgColor:'bg-secondary', image:"{% static 'static/img/resume/atom.png' %}"},
                   {name:"PyCharm", progress:100, bgColor:'bg-success', image:"{% static 'static/img/resume/pycharm.png' %}"},
                   {name:"Visual Studio", progress:100, bgColor:'bg-dark', image:"{% static 'static/img/resume/vstudio.png' %}"},
                   {name:"Eclipse", progress:80, bgColor:'bg-warning', image:"{% static 'static/img/resume/eclipse.png' %}"},
@@ -133,9 +153,23 @@ var demo = new Vue({
 
 
 
-      jobs: [{employer: "INDIANA TECH IT DEPARTMENT", title: "Student Developer", location: "Fort Wayne, IN", date:"September 2017 – August 2017", roles:["Perform SQL queries to pull data from the entire Indiana Tech’s database to integrate with blackboard and starfish",
-      "Work on files such as student course records, attendance, admissions data and create SIS data packages to be used by different Indiana Tech staff members.", "Discuss how we should handle data such as data access and data display across school platforms"]},{employer: "INDIANA TECH IT DEPARTMENT", title: "Student Developer", location: "Fort Wayne, IN", date:"September 2017 – August 2017", roles:["Perform SQL queries to pull data from the entire Indiana Tech’s database to integrate with blackboard and starfish",
-      "Work on files such as student course records, attendance, admissions data and create SIS data packages to be used by different Indiana Tech staff members.", "Discuss how we should handle data such as data access and data display across school platforms"]}
+      jobs: [{employer: "Petroleum Traders Corporation", title: "Software Developer Intern", location: "Fort Wayne, IN", date:"May 2018 – August 2018", roles:["Integrated new features on the internal site such as allowing employees to input hours of operation for Ship-To locations and made it abstract enough to implement into other models using strategic SQL relational database techniques.",
+      "Automated task and reduced up to 90 minutes of employee work time by parsing several incoming files from emails using regular expressions and populated the parsed information to the database using VBScript.", "Implemented asynchronous warnings to employees on the frontend to prevent employees from setting invalid form data such as setting hours outside a ship-to or terminal hours of operation.",
+      "Added support for reports to be downloaded as text files for simplicity rather than always being downloaded as pdf, excel, or report format improving the speed of less complex reports.", "Replaced old functions throughout the code base with faster functions increasing performance speeds of the internal system by 20%.", "Completed over 10 help desk tickets related to software issues such as a bugs or user experience preferences in a timely manner as they were submitted.", "Completed 15 software development projects for the company over a duration of 10 weeks."]},
+
+      {employer: "Visumic", title: "Full Stack Web Developer/Founder", location: "Brooklyn, NY", date:"August 2017 – May 2018", roles:[
+      "Implemented MVC model using Django framework with code separation logic for routing, models, views, and testing", "Developed a smooth responsive frontend using HTML, CSS, bootstrap and media queries.", "Developed a robust SQL relational database with validation and methods for tables such as users, videos, genres, playlist, sharing, followers, and more.",
+      "Developed a fully functional REST API that supports CRUD operations and authentication.", "Developed modern features such as subscription, uploading media files, user accounts, events, notifications, and sharing.", "Managed a database with over 7,000 rows."]},
+
+      {employer: "INDIANA TECH IT DEPARTMENT", title: "Student Developer", location: "Fort Wayne, IN", date:"September 2017 – August 2017", roles:["Perform SQL queries to pull data from Indiana Tech’s database to integrate with blackboard and starfish.",
+      "Imported aggregate data into the system so academic advisers can look at trends and improve academic performance.", "Imported aggregate data into the system so adviser can look at trends and improve academic performance.", "Discussed and integrated how we should handle data such as data access and data display across school platforms"
+         ]},
+
+     {employer: "INDIANA TECH Office of Student Success", title: "Peer Tutor", location: "Fort Wayne, IN", date:"January 2017 – May 2018", roles:["Tutored low and high level math & computer science courses to students of various backgrounds.",
+      "Increased test scores of students by an average of 30% through personalized tutoring.", "Managed progress reports, reoccurring appointments, and prepared engaging work to match students’ skill level with an average of 10 personal appointments per week.", "Discussed with professors and advisers how we can improve academic performance among various types of students such as athletes, students with learning disabilities, and transitioning students."]},
+
+     {employer: "Google Computer Science Summer Institute", title: "Student", location: "New York, NY", date:"July 2015 – August 2015", roles:["Learned about HTML, CSS & Javascript/JQuery and backend development using Python from Google Engineers.", "Worked with two other students to complete a web application project in 4 days.",
+      "Made API calls to Eventbrite to pull out specific data such as categories and location to get desired results and displayed information about the event on the frontend.", "Created an event form handler that allowed users to upload their own events.", "Developed a search form event handler that pulled data from the Eventbrite API and our own database simultaneously.", "Presented our final project to an audience of Google engineers."]}
 
       ]
       }
