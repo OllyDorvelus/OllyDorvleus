@@ -4,38 +4,42 @@
 <div id="resume" class="row">
 
             <div id="experience" class="col-xs-12 col-md-6 offset-md-1 col-lg-6 offset-lg-1 ">
-                <div id="software_dev" style="padding-bottom:2rem">
+                <div id="software_dev" style="padding-bottom:.8rem">
                     <div class="resume-section-title">Software Development Skills</div>
                     <hr>
                         <div class="row" style="padding-left:3rem">
                             <div class="col-lg-6 col-md-6">
-                                <li>Object Oriented Design</li>
-                                <li>Relational database design and concepts</li>
-                                <li>Agile/Scrum/Kanban/Waterfall Methodologies</li>
-                                <li>Source and version control</li>
-                                <li>Testing and debugging</li>
+                                <ul style="line-height:1.3rem">
+                                    <li>Object Oriented Design</li>
+                                    <li>Relational database design and concepts</li>
+                                    <li>Agile/Scrum/Kanban/Waterfall Methodologies</li>
+                                    <li>Source and version control</li>
+                                    <li>Testing and debugging</li>
+                                </ul>
                             </div>
                             <div class="col-lg-6 col-md-6">
-                                 <li>API Design</li>
-                                 <li>Full stack web development</li>
-                                 <li>Documentation and planning</li>
-                                 <li>Data structure and algorithm concepts</li>
-                                 <li>Familiar with mobile app development</li>
+                                <ul style="line-height:1.3rem">
+                                     <li>API Design</li>
+                                     <li>Full stack web development</li>
+                                     <li>Documentation and planning for all different processes of software development</li>
+                                     <li>Data structure and algorithm concepts</li>
+                                     <li>Familiar with mobile app development</li>
+                                </ul>
                             </div>
                         </div>
                 </div>
                 <div class="resume-section-title">Professional Experience</div>
                 <hr>
-                <div v-for="job in jobs" style="padding-top:1.5rem">
+                <div v-for="job in jobs" style="padding-top:0.25rem">
                     <div class="experience-sub">
                         <div>
                             <div class="loc-date" style="float:right"><em><p>${job.location}</p><p>${job.date}</p></em></div>
                             <h5 style="" class="job-title">${job.employer}</h5>
-                            <em><h6 style="margin-left:0.8rem">${job.title}</h6></em>
+                            <em><h6>${job.title}</h6></em>
                             <div class="did-section" v-for="role in job.roles">
-                                <div>
-                                    <p class="did-item">- ${role}</p>
-                                </div>
+                                <ul style="margin-top:0.3rem;margin-bottom:0.3rem;line-height:1.4rem">
+                                    <li class="did-item"><span>${role}</span></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -47,7 +51,7 @@
                 <span style="padding-left:2rem">"It</span> was a pleasure to have Olivier Dorvelus work with us as an intern this summer.  Olivier is a bright student, and brought a wealth of skills with him to this position.
                 I am confident he will do well in his career.
 
-                Olivier accomplished more than we were expecting!  I’ve attached a report of some of the projects he completed this summer, along with a report of his hours worked..
+                Olivier accomplished more than we were expecting!
                 There were additional task that he worked on as well.  This included preparing a presentation for our Software Development team on his experiences and recommended tools for developing mobile applications
                 and modern web sites.
 
@@ -183,7 +187,7 @@ var demo = new Vue({
       "Developed a fully functional REST API that supports CRUD operations and authentication.", "Developed modern features such as subscription, uploading media files, user accounts, events, notifications, and sharing.", "Managed a database with over 7,000 rows."]},
 
       {employer: "INDIANA TECH IT DEPARTMENT", title: "Student Developer", location: "Fort Wayne, IN", date:"September 2017 – August 2017", roles:["Perform SQL queries to pull data from Indiana Tech’s database to integrate with blackboard and starfish.",
-      "Imported aggregate data into the system so academic advisers can look at trends and improve academic performance.", "Imported aggregate data into the system so adviser can look at trends and improve academic performance.", "Discussed and integrated how we should handle data such as data access and data display across school platforms"
+      "Imported aggregate data into the system so academic advisers can look at trends and improve academic performance.", "Discussed and integrated how we should handle data such as data access and data display across school platforms"
          ]},
 
      {employer: "INDIANA TECH Office of Student Success", title: "Peer Tutor", location: "Fort Wayne, IN", date:"January 2017 – May 2018", roles:["Tutored low and high level math & computer science courses to students of various backgrounds.",
