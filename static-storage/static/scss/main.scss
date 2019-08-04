@@ -253,12 +253,16 @@ subnav {
 
   ul {
     li {
-      font-size:1.15rem;
+      font-size:1.5rem;
       list-style-type: circle;
       padding-top: .5rem;
       padding-bottom: .5rem;
     }
   }
+}
+
+.card-link:hover {
+  opacity: 0.4;
 }
 
 
